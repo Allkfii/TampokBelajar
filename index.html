@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Error Recognition - Bahasa Inggris</title>
+  <link rel="stylesheet" href="error_recognition_beginner.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>📖 Belajar Error Recognition</h1>
+  <p>Website belajar bahasa Inggris - Grammar Errors</p>
+</div>
+
+<div class="menu">
+  <button onclick="bukaHalaman('home')" id="btn-home" class="aktif">🏠 Beranda</button>
+  <button onclick="bukaHalaman('materi')" id="btn-materi">📚 Materi</button>
+  <button onclick="bukaHalaman('quiz')" id="btn-quiz">📝 Quiz</button>
+  <button onclick="bukaHalaman('cheat')" id="btn-cheat">📋 Rangkuman</button>
+</div>
+
+<div class="konten">
+
+  <!-- HALAMAN BERANDA -->
+  <div id="halaman-home">
+    <div class="kotak-sambutan">
+      <h2>Selamat Datang! 👋</h2>
+      <p>
+        Di sini kamu bisa belajar tentang <strong>Error Recognition</strong> dalam bahasa Inggris.<br>
+        Pelajari 9 jenis kesalahan grammar yang sering muncul di ujian!
+      </p>
+      <p>Pilih menu di atas untuk mulai belajar, atau klik salah satu jenis error di bawah ini:</p>
+    </div>
+
+    <div class="grid-tipe">
+      <div class="kotak-tipe" onclick="bukaHalaman('materi')">
+        <div class="huruf">A</div>
+        <div class="nama">Verb Errors</div>
+      </div>
+      <div class="kotak-tipe" onclick="bukaHalaman('materi')">
+        <div class="huruf">B</div>
+        <div class="nama">Word Form Errors</div>
+      </div>
+      <div class="kotak-tipe" onclick="bukaHalaman('materi')">
+        <div class="huruf">C</div>
+        <div class="nama">Word Choice Errors</div>
+      </div>
+      <div class="kotak-tipe" onclick="bukaHalaman('materi')">
+        <div class="huruf">D</div>
+        <div class="nama">Preposition Errors</div>
+      </div>
+      <div class="kotak-tipe" onclick="bukaHalaman('materi')">
+        <div class="huruf">E</div>
+        <div class="nama">Singular/Plural Errors</div>
+      </div>
+      <div class="kotak-tipe" onclick="bukaHalaman('materi')">
+        <div class="huruf">F</div>
+        <div class="nama">Word Order Errors</div>
+      </div>
+      <div class="kotak-tipe" onclick="bukaHalaman('materi')">
+        <div class="huruf">G</div>
+        <div class="nama">Conjunction Errors</div>
+      </div>
+      <div class="kotak-tipe" onclick="bukaHalaman('materi')">
+        <div class="huruf">H</div>
+        <div class="nama">Pronoun Errors</div>
+      </div>
+      <div class="kotak-tipe" onclick="bukaHalaman('materi')">
+        <div class="huruf">I</div>
+        <div class="nama">Comparative Errors</div>
+      </div>
+    </div>
+
+    <br>
+    <div style="background:#fffbe6;border:2px solid #ffcc00;border-radius:8px;padding:15px;margin-top:5px;">
+      <strong>💡 Tips Belajar:</strong>
+      <ul style="margin:8px 0 0 0;font-size:14px;color:#555;line-height:1.8;">
+        <li>Baca materi dulu sebelum mengerjakan quiz</li>
+        <li>Perhatikan contoh kalimat salah dan yang benar</li>
+        <li>Coba quiz minimal 2 kali untuk hasil yang lebih baik</li>
+        <li>Gunakan Rangkuman sebagai bahan review cepat</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HALAMAN MATERI -->
+  <div id="halaman-materi" style="display:none">
+
+    <h2 style="color:#3399ff;margin-bottom:5px;">📚 Materi Error Recognition</h2>
+    <p style="color:#666;font-size:14px;margin-top:0;margin-bottom:15px;">Klik judul untuk membuka atau menutup materi.</p>
+
+    <!-- A -->
+    <div class="kotak-materi">
+      <div class="judul-materi" onclick="toggle('mat-a')">
+        <span>🔵 Tipe A &nbsp;—&nbsp; Verb Errors</span>
+        <span id="arrow-mat-a">▼</span>
+      </div>
+      <div class="isi-materi" id="mat-a">
+        <p><strong>1. Subject-Verb Agreement</strong><br>
+        Subjek tunggal (singular) harus diikuti kata kerja tunggal, dan subjek jamak (plural) diikuti kata kerja jamak.</p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> People <u>has</u> taken the free food.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> People <strong>have</strong> taken the free food.</div>
+
+        <p style="margin-top:12px"><strong>2. Verb Form</strong><br>
+        Kesalahan umum: memakai past tense biasa padahal seharusnya past participle (untuk passive/perfect tense).</p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> This book was <u>wrote</u> by Mr. Joe.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> This book was <strong>written</strong> by Mr. Joe.</div>
+      </div>
+    </div>
+
+    <!-- B -->
+    <div class="kotak-materi">
+      <div class="judul-materi" onclick="toggle('mat-b')">
+        <span>🔵 Tipe B &nbsp;—&nbsp; Word Form Errors</span>
+        <span id="arrow-mat-b">▼</span>
+      </div>
+      <div class="isi-materi" id="mat-b">
+        <p><strong>1. Bentuk kata yang salah (noun/verb/adjective/adverb)</strong></p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> I will mention three <u>different</u> between the books.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> I will mention three <strong>differences</strong> between the books.</div>
+
+        <p style="margin-top:12px"><strong>2. Cardinal vs. Ordinal Number</strong><br>
+        Cardinal = menghitung (one, two, three). Ordinal = urutan (first, second, third).</p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> For the <u>four</u> time this month, Paula got the wrong bus.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> For the <strong>fourth</strong> time this month, Paula got the wrong bus.</div>
+      </div>
+    </div>
+
+    <!-- C -->
+    <div class="kotak-materi">
+      <div class="judul-materi" onclick="toggle('mat-c')">
+        <span>🔵 Tipe C &nbsp;—&nbsp; Word Choice Errors</span>
+        <span id="arrow-mat-c">▼</span>
+      </div>
+      <div class="isi-materi" id="mat-c">
+        <p>Kesalahan memilih kata yang mirip tapi berbeda makna/penggunaan. Contoh kata yang sering tertukar:</p>
+        <ul style="font-size:14px;line-height:1.9;color:#333">
+          <li><strong>too / so / such</strong></li>
+          <li><strong>most / almost</strong></li>
+          <li><strong>ever / never</strong></li>
+          <li><strong>no / none / not</strong></li>
+          <li><strong>after / afterwards</strong></li>
+        </ul>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> <u>Almost</u> students passed the exam.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> <strong>Most</strong> students passed the exam.<br>
+        <span style="font-size:12px;color:#666">(<em>Almost</em> dipakai sebelum kata sifat/keterangan, bukan sebelum kata benda)</span></div>
+      </div>
+    </div>
+
+    <!-- D -->
+    <div class="kotak-materi">
+      <div class="judul-materi" onclick="toggle('mat-d')">
+        <span>🔵 Tipe D &nbsp;—&nbsp; Preposition Errors</span>
+        <span id="arrow-mat-d">▼</span>
+      </div>
+      <div class="isi-materi" id="mat-d">
+        <p><strong>1. Preposisi yang salah</strong></p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> We are not satisfied <u>in</u> the result.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> We are not satisfied <strong>with</strong> the result.</div>
+
+        <p style="margin-top:12px"><strong>2. Preposisi yang hilang (omitted)</strong></p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> She did not reply <u>the email</u>.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> She did not reply <strong>to</strong> the email.</div>
+      </div>
+    </div>
+
+    <!-- E -->
+    <div class="kotak-materi">
+      <div class="judul-materi" onclick="toggle('mat-e')">
+        <span>🔵 Tipe E &nbsp;—&nbsp; Singular & Plural Noun Errors</span>
+        <span id="arrow-mat-e">▼</span>
+      </div>
+      <div class="isi-materi" id="mat-e">
+        <p><strong>1. Each/every + singular noun</strong></p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> The book must be read by each <u>students</u>.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> The book must be read by each <strong>student</strong>.</div>
+
+        <p style="margin-top:12px"><strong>2. Uncountable nouns tidak bisa di-pluralkan</strong><br>
+        Contoh: information, advice, furniture, luggage, equipment</p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> I found some <u>informations</u> about the case.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> I found some <strong>information</strong> about the case.</div>
+
+        <p style="margin-top:12px"><strong>3. Compound noun phrase</strong></p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> Mr. Poe needs two <u>pictures frames</u>.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> Mr. Poe needs two <strong>picture frames</strong>.</div>
+
+        <p style="margin-top:12px"><strong>4. Angka + kata benda (hyphenated adjective)</strong></p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> I took a <u>ten-minutes</u> break.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> I took a <strong>ten-minute</strong> break.</div>
+      </div>
+    </div>
+
+    <!-- F -->
+    <div class="kotak-materi">
+      <div class="judul-materi" onclick="toggle('mat-f')">
+        <span>🔵 Tipe F &nbsp;—&nbsp; Word Order Errors</span>
+        <span id="arrow-mat-f">▼</span>
+      </div>
+      <div class="isi-materi" id="mat-f">
+        <p>Dua kata ditukar posisinya sehingga kalimat menjadi salah.</p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> I got a <u>long extremely</u> lecture from Mr. John.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> I got an <strong>extremely long</strong> lecture from Mr. John.</div>
+        <p style="font-size:13px;color:#666">Keterangan (adverb) harus muncul sebelum kata sifat yang dimodifikasinya.</p>
+      </div>
+    </div>
+
+    <!-- G -->
+    <div class="kotak-materi">
+      <div class="judul-materi" onclick="toggle('mat-g')">
+        <span>🔵 Tipe G &nbsp;—&nbsp; Conjunction Errors</span>
+        <span id="arrow-mat-g">▼</span>
+      </div>
+      <div class="isi-materi" id="mat-g">
+        <p><strong>1. Correlative Conjunctions</strong> (pasangan kata hubung)</p>
+        <table style="font-size:13px;width:100%;border-collapse:collapse;margin-bottom:10px">
+          <tr style="background:#e8f4ff">
+            <td style="padding:6px 10px;border:1px solid #ccc"><strong>Either</strong> A <strong>or</strong> B</td>
+            <td style="padding:6px 10px;border:1px solid #ccc"><strong>Neither</strong> A <strong>nor</strong> B</td>
+          </tr>
+          <tr>
+            <td style="padding:6px 10px;border:1px solid #ccc"><strong>Both</strong> A <strong>and</strong> B</td>
+            <td style="padding:6px 10px;border:1px solid #ccc"><strong>Not only</strong> A <strong>but also</strong> B</td>
+          </tr>
+        </table>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> I want either iced-tea <u>and</u> lemon juice.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> I want either iced-tea <strong>or</strong> lemon juice.</div>
+
+        <p style="margin-top:12px"><strong>2. And vs. But</strong></p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> She usually takes the bus, <u>and</u> today she drove her car.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> She usually takes the bus, <strong>but</strong> today she drove her car.</div>
+      </div>
+    </div>
+
+    <!-- H -->
+    <div class="kotak-materi">
+      <div class="judul-materi" onclick="toggle('mat-h')">
+        <span>🔵 Tipe H &nbsp;—&nbsp; Pronoun Errors</span>
+        <span id="arrow-mat-h">▼</span>
+      </div>
+      <div class="isi-materi" id="mat-h">
+        <p><strong>1. Pronoun tidak cocok dengan noun</strong></p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> He left his book, but he found <u>them</u> the next day.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> He left his book, but he found <strong>it</strong> the next day.</div>
+
+        <p style="margin-top:12px"><strong>2. Pronoun yang tidak perlu (unnecessary)</strong></p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> Dona, my older sister, <u>she</u> is a bright student.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> Dona, my older sister, is a bright student.</div>
+
+        <p style="margin-top:12px"><strong>3. Bentuk pronoun yang salah</strong></p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> This award was given to <u>he</u>.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> This award was given to <strong>him</strong>.</div>
+      </div>
+    </div>
+
+    <!-- I -->
+    <div class="kotak-materi">
+      <div class="judul-materi" onclick="toggle('mat-i')">
+        <span>🔵 Tipe I &nbsp;—&nbsp; Comparative & Superlative Errors</span>
+        <span id="arrow-mat-i">▼</span>
+      </div>
+      <div class="isi-materi" id="mat-i">
+        <p><strong>1. Double superlative (salah berganda)</strong></p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> July is the <u>most coldest</u> month of the year.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> July is the <strong>coldest</strong> month of the year.</div>
+
+        <p style="margin-top:12px"><strong>2. As...as harus pakai bentuk dasar (positive form)</strong></p>
+        <div class="contoh-salah"><span class="label-salah">✗ Salah:</span> This book is as <u>bigger</u> as my old one.</div>
+        <div class="contoh-benar"><span class="label-benar">✓ Benar:</span> This book is as <strong>big</strong> as my old one.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HALAMAN QUIZ -->
+  <div id="halaman-quiz" style="display:none">
+    <h2 style="color:#3399ff;margin-bottom:5px;">📝 Quiz Error Recognition</h2>
+    <p style="color:#666;font-size:14px;margin-top:0;margin-bottom:15px;">Pilih jawaban yang tepat, lalu klik "Cek Jawaban".</p>
+
+    <div id="area-soal"></div>
+
+    <div class="kotak-hasil" id="kotak-hasil">
+      <h2>🎉 Quiz Selesai!</h2>
+      <div class="skor-besar" id="tampil-skor">0/0</div>
+      <p id="tampil-pesan" style="color:#555;font-size:15px"></p>
+      <button class="tombol-ulang" onclick="mulaQuiz()">🔄 Ulangi Quiz</button>
+      <button class="tombol-ulang" onclick="bukaHalaman('materi')" style="background:#3399ff;color:white;margin-left:8px">📚 Baca Materi Lagi</button>
+    </div>
+  </div>
+
+  <!-- HALAMAN RANGKUMAN -->
+  <div id="halaman-cheat" style="display:none">
+    <h2 style="color:#3399ff;margin-bottom:5px;">📋 Rangkuman Error Recognition</h2>
+    <p style="color:#666;font-size:14px;margin-top:0;margin-bottom:15px;">Semua jenis error dalam satu tabel.</p>
+
+    <table class="tabel-cheat">
+      <thead>
+        <tr>
+          <th style="width:100px">Tipe</th>
+          <th>Nama Error</th>
+          <th>Penjelasan Singkat</th>
+          <th>Contoh Salah → Benar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="badge-tipe">Tipe A</span></td>
+          <td><strong>Verb Errors</strong></td>
+          <td>Subject-verb agreement & verb form yang salah</td>
+          <td><span style="color:red">People has</span> → <span style="color:green">People have</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-tipe">Tipe B</span></td>
+          <td><strong>Word Form Errors</strong></td>
+          <td>Salah bentuk kata (noun/adj/verb/adv) & cardinal/ordinal</td>
+          <td><span style="color:red">three different</span> → <span style="color:green">three differences</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-tipe">Tipe C</span></td>
+          <td><strong>Word Choice Errors</strong></td>
+          <td>Kata yang mirip tapi beda makna: too/so, most/almost</td>
+          <td><span style="color:red">Almost students</span> → <span style="color:green">Most students</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-tipe">Tipe D</span></td>
+          <td><strong>Preposition Errors</strong></td>
+          <td>Preposisi salah atau preposisi yang hilang</td>
+          <td><span style="color:red">reply the email</span> → <span style="color:green">reply to the email</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-tipe">Tipe E</span></td>
+          <td><strong>Singular/Plural Noun Errors</strong></td>
+          <td>Uncountable nouns, each+singular, compound nouns</td>
+          <td><span style="color:red">informations</span> → <span style="color:green">information</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-tipe">Tipe F</span></td>
+          <td><strong>Word Order Errors</strong></td>
+          <td>Urutan kata yang tertukar</td>
+          <td><span style="color:red">long extremely</span> → <span style="color:green">extremely long</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-tipe">Tipe G</span></td>
+          <td><strong>Conjunction Errors</strong></td>
+          <td>Pasangan konjungsi salah: either…or, neither…nor</td>
+          <td><span style="color:red">either…and</span> → <span style="color:green">either…or</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-tipe">Tipe H</span></td>
+          <td><strong>Pronoun Errors</strong></td>
+          <td>Pronoun tidak cocok, tidak perlu, atau bentuk salah</td>
+          <td><span style="color:red">given to he</span> → <span style="color:green">given to him</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-tipe">Tipe I</span></td>
+          <td><strong>Comparative/Superlative Errors</strong></td>
+          <td>Double superlative, as...as + comparative (salah)</td>
+          <td><span style="color:red">most coldest</span> → <span style="color:green">coldest</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top:20px;background:#fffbe6;border:2px solid #ffcc00;border-radius:8px;padding:15px">
+      <strong>📌 Cara Cepat Ingat:</strong>
+      <ul style="font-size:14px;line-height:1.9;color:#555;margin-top:8px">
+        <li><strong>Uncountable nouns</strong> TIDAK bisa ditambah -s: information, advice, luggage, furniture</li>
+        <li><strong>Each / every</strong> selalu diikuti kata benda tunggal</li>
+        <li><strong>As...as</strong> selalu pakai bentuk dasar kata sifat (bukan comparative)</li>
+        <li><strong>Most</strong> untuk kata benda, <strong>almost</strong> untuk kata sifat/keterangan/verba</li>
+        <li><strong>Neither…nor</strong>, <strong>either…or</strong>, <strong>both…and</strong> — pasangannya tidak bisa ditukar!</li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- end .konten -->
+
+<div class="footer">
+  &copy; 2024 &nbsp;|&nbsp; Website Belajar Error Recognition &nbsp;|&nbsp; Bahasa Inggris
+</div>
+
+<script>
+// ==========================================
+// NAVIGASI HALAMAN
+// ==========================================
+function bukaHalaman(nama) {
+  var halaman = ['home','materi','quiz','cheat'];
+  for (var i = 0; i < halaman.length; i++) {
+    var el = document.getElementById('halaman-' + halaman[i]);
+    var btn = document.getElementById('btn-' + halaman[i]);
+    if (halaman[i] === nama) {
+      el.style.display = 'block';
+      btn.className = 'aktif';
+    } else {
+      el.style.display = 'none';
+      btn.className = '';
+    }
+  }
+  if (nama === 'quiz') {
+    mulaQuiz();
+  }
+  window.scrollTo(0, 0);
+}
+
+// ==========================================
+// TOGGLE MATERI
+// ==========================================
+function toggle(id) {
+  var el = document.getElementById(id);
+  var arrow = document.getElementById('arrow-' + id);
+  if (el.style.display === 'block') {
+    el.style.display = 'none';
+    arrow.textContent = '▼';
+  } else {
+    el.style.display = 'block';
+    arrow.textContent = '▲';
+  }
+}
+
+// ==========================================
+// DATA SOAL QUIZ
+// ==========================================
+var semuaSoal = [
+  {
+    tipe: 'Tipe A — Verb Errors',
+    soal: 'Cari kata yang salah dalam kalimat berikut:',
+    kalimat: 'The committee <u>have</u> decided to change the schedule.',
+    pilihan: [
+      'Salah — "have" seharusnya "has" (committee = singular)',
+      'Benar — tidak ada kesalahan',
+      'Salah — "decided" seharusnya "decide"',
+      'Salah — "to change" seharusnya "changing"'
+    ],
+    jawaban: 0,
+    penjelasan: '"Committee" adalah collective noun yang dianggap singular, jadi kata kerjanya harus "has".'
+  },
+  {
+    tipe: 'Tipe A — Verb Errors',
+    soal: 'Pilih kalimat yang BENAR:',
+    kalimat: '',
+    pilihan: [
+      'The report was wrote by the manager.',
+      'The report was written by the manager.',
+      'The report was write by the manager.',
+      'The report were written by the manager.'
+    ],
+    jawaban: 1,
+    penjelasan: 'Setelah "was" (passive), kita butuh past participle. "Write" → past participle = "written".'
+  },
+  {
+    tipe: 'Tipe B — Word Form Errors',
+    soal: 'Cari kesalahan Word Form dalam kalimat ini:',
+    kalimat: 'She gave us three <u>advices</u> about how to study.',
+    pilihan: [
+      '"advices" salah — seharusnya "advice" (uncountable)',
+      '"three" salah — seharusnya "some"',
+      '"gave" salah — seharusnya "gives"',
+      'Tidak ada kesalahan'
+    ],
+    jawaban: 0,
+    penjelasan: '"Advice" adalah uncountable noun, tidak bisa ditambah -s menjadi "advices".'
+  },
+  {
+    tipe: 'Tipe B — Word Form Errors',
+    soal: 'Mana kalimat yang benar?',
+    kalimat: '',
+    pilihan: [
+      'For the two time, she was late.',
+      'For the twice time, she was late.',
+      'For the second time, she was late.',
+      'For the second times, she was late.'
+    ],
+    jawaban: 2,
+    penjelasan: '"Time" di sini menunjukkan urutan, bukan jumlah → gunakan ordinal number "second".'
+  },
+  {
+    tipe: 'Tipe C — Word Choice Errors',
+    soal: 'Cari kata yang salah:',
+    kalimat: '<u>Most</u> all of the students passed the examination.',
+    pilihan: [
+      '"Most" salah — seharusnya "Almost"',
+      '"passed" salah — seharusnya "pass"',
+      '"examination" salah — seharusnya "exam"',
+      'Tidak ada kesalahan'
+    ],
+    jawaban: 0,
+    penjelasan: '"Almost all of the students" = hampir semua. "Most" tidak bisa diikuti "all" langsung.'
+  },
+  {
+    tipe: 'Tipe D — Preposition Errors',
+    soal: 'Pilih preposisi yang benar:',
+    kalimat: 'He is very good ___ playing football.',
+    pilihan: [
+      'in',
+      'on',
+      'at',
+      'for'
+    ],
+    jawaban: 2,
+    penjelasan: '"Good at" adalah kolokasi yang benar untuk menyatakan kemampuan/keahlian.'
+  },
+  {
+    tipe: 'Tipe D — Preposition Errors',
+    soal: 'Kalimat mana yang memiliki preposisi yang hilang?',
+    kalimat: '',
+    pilihan: [
+      'She listens to music every morning.',
+      'They arrived at the station on time.',
+      'He did not reply her message.',
+      'We talked about the project yesterday.'
+    ],
+    jawaban: 2,
+    penjelasan: '"Reply" membutuhkan preposisi "to" sebelum objeknya → "reply to her message".'
+  },
+  {
+    tipe: 'Tipe E — Singular/Plural Noun Errors',
+    soal: 'Temukan kesalahan dalam kalimat berikut:',
+    kalimat: 'Each <u>students</u> must submit their assignment by Friday.',
+    pilihan: [
+      '"students" salah — seharusnya "student" (each + singular)',
+      '"must submit" salah — seharusnya "must submitted"',
+      '"their" salah — seharusnya "his"',
+      'Tidak ada kesalahan'
+    ],
+    jawaban: 0,
+    penjelasan: '"Each" selalu diikuti kata benda tunggal (singular noun) → "each student".'
+  },
+  {
+    tipe: 'Tipe E — Singular/Plural Noun Errors',
+    soal: 'Pilih kalimat yang benar:',
+    kalimat: '',
+    pilihan: [
+      'She bought two dozens eggs.',
+      'She bought two dozen of eggs.',
+      'She bought two dozen eggs.',
+      'She bought two dozens of eggs.'
+    ],
+    jawaban: 2,
+    penjelasan: 'Dalam compound noun phrase dengan angka, noun modifiernya tetap singular → "two dozen eggs".'
+  },
+  {
+    tipe: 'Tipe F — Word Order Errors',
+    soal: 'Temukan kesalahan urutan kata:',
+    kalimat: 'She is a <u>known internationally</u> scientist.',
+    pilihan: [
+      '"known internationally" salah — seharusnya "internationally known"',
+      '"scientist" salah — seharusnya "scientists"',
+      '"She" salah — seharusnya "Her"',
+      'Tidak ada kesalahan'
+    ],
+    jawaban: 0,
+    penjelasan: 'Adverb (internationally) harus berada sebelum adjective/participle yang dimodifikasinya → "internationally known".'
+  },
+  {
+    tipe: 'Tipe G — Conjunction Errors',
+    soal: 'Pilih conjunction yang benar:',
+    kalimat: 'Neither the teacher ___ the students knew the answer.',
+    pilihan: [
+      'or',
+      'nor',
+      'and',
+      'but'
+    ],
+    jawaban: 1,
+    penjelasan: '"Neither...nor" adalah pasangan yang benar. "Neither...or" adalah kesalahan.'
+  },
+  {
+    tipe: 'Tipe G — Conjunction Errors',
+    soal: 'Kalimat mana yang menggunakan conjunction dengan BENAR?',
+    kalimat: '',
+    pilihan: [
+      'Both my brother or I will attend the event.',
+      'Both my brother and I will attend the event.',
+      'Both my brother nor I will attend the event.',
+      'Both my brother but I will attend the event.'
+    ],
+    jawaban: 1,
+    penjelasan: '"Both...and" adalah pasangan yang benar dalam correlative conjunctions.'
+  },
+  {
+    tipe: 'Tipe H — Pronoun Errors',
+    soal: 'Cari kesalahan pronoun:',
+    kalimat: 'My sister Ana, <u>she</u> loves to paint every weekend.',
+    pilihan: [
+      '"she" tidak perlu ada — ini pronoun yang redundan',
+      '"loves" salah — seharusnya "love"',
+      '"every" salah — seharusnya "each"',
+      'Tidak ada kesalahan'
+    ],
+    jawaban: 0,
+    penjelasan: 'Setelah appositive ("My sister Ana"), tidak perlu mengulang subjek dengan pronoun "she".'
+  },
+  {
+    tipe: 'Tipe H — Pronoun Errors',
+    soal: 'Pilih kalimat yang BENAR:',
+    kalimat: '',
+    pilihan: [
+      'This gift was made for she and her friend.',
+      'This gift was made for her and her friend.',
+      'This gift was made for she and hers friend.',
+      'This gift was made for her and she friend.'
+    ],
+    jawaban: 1,
+    penjelasan: 'Setelah preposisi "for", kita gunakan object pronoun → "her" (bukan "she").'
+  },
+  {
+    tipe: 'Tipe I — Comparative/Superlative Errors',
+    soal: 'Temukan kesalahan comparative/superlative:',
+    kalimat: 'He is the <u>most smartest</u> student in the class.',
+    pilihan: [
+      '"most smartest" salah — seharusnya "smartest" saja',
+      '"the" salah — seharusnya "a"',
+      '"student" salah — seharusnya "students"',
+      'Tidak ada kesalahan'
+    ],
+    jawaban: 0,
+    penjelasan: 'Tidak boleh memakai "most" dan "-est" bersamaan. Pilih salah satu: "the smartest" atau "the most intelligent".'
+  },
+  {
+    tipe: 'Tipe I — Comparative/Superlative Errors',
+    soal: 'Pilih kalimat yang benar:',
+    kalimat: '',
+    pilihan: [
+      'Her bag is as more expensive as mine.',
+      'Her bag is as expensive as mine.',
+      'Her bag is as expensiver as mine.',
+      'Her bag is as most expensive as mine.'
+    ],
+    jawaban: 1,
+    penjelasan: '"As...as" harus diikuti bentuk dasar (positive form) kata sifat, bukan comparative atau superlative.'
+  }
+];
+
+var soalAktif = [];
+var skorUser = 0;
+var soalDijawab = 0;
+
+function mulaQuiz() {
+  // Acak soal
+  soalAktif = semuaSoal.slice().sort(function() { return Math.random() - 0.5; });
+  skorUser = 0;
+  soalDijawab = 0;
+
+  var area = document.getElementById('area-soal');
+  var hasil = document.getElementById('kotak-hasil');
+  hasil.style.display = 'none';
+  area.innerHTML = '';
+
+  for (var i = 0; i < soalAktif.length; i++) {
+    area.innerHTML += buatSoal(i, soalAktif[i]);
+  }
+
+  // Tambah tombol lihat hasil di bawah semua soal
+  area.innerHTML += '<div style="text-align:center;margin-top:20px">' +
+    '<button class="tombol-cek" id="tombol-selesai" onclick="selesaiQuiz()" style="font-size:15px;padding:10px 30px;background:#ffcc00;color:#333;border-color:#ffcc00">🏁 Lihat Hasil Quiz</button>' +
+    '</div>';
+}
+
+function buatSoal(idx, data) {
+  var label = ['A', 'B', 'C', 'D'];
+  var pilihanHTML = '';
+  for (var i = 0; i < data.pilihan.length; i++) {
+    pilihanHTML += '<li>' +
+      '<label id="label-' + idx + '-' + i + '">' +
+      '<input type="radio" name="soal' + idx + '" value="' + i + '" onchange="cekJawaban(' + idx + ', ' + i + ', ' + data.jawaban + ')">' +
+      ' <strong>' + label[i] + '.</strong> ' + data.pilihan[i] +
+      '</label>' +
+      '</li>';
+  }
+
+  var kalimatHTML = '';
+  if (data.kalimat) {
+    kalimatHTML = '<div class="kalimat-soal">' + data.kalimat + '</div>';
+  }
+
+  return '<div class="kotak-soal" id="kotak-soal-' + idx + '">' +
+    '<span class="nomor-soal">Soal ' + (idx + 1) + ' · ' + data.tipe + '</span>' +
+    '<div class="teks-soal">' + data.soal + '</div>' +
+    kalimatHTML +
+    '<ul class="pilihan-jawaban">' + pilihanHTML + '</ul>' +
+    '<div class="feedback-soal" id="fb-' + idx + '"></div>' +
+    '</div>';
+}
+
+function cekJawaban(idxSoal, pilihanUser, jawabanBenar) {
+  var radios = document.querySelectorAll('input[name="soal' + idxSoal + '"]');
+  var fb = document.getElementById('fb-' + idxSoal);
+
+  // Nonaktifkan semua radio
+  for (var i = 0; i < radios.length; i++) {
+    radios[i].disabled = true;
+    var lbl = document.getElementById('label-' + idxSoal + '-' + i);
+    if (i === jawabanBenar) {
+      lbl.className = 'benar';
+    } else if (i === pilihanUser && pilihanUser !== jawabanBenar) {
+      lbl.className = 'salah';
+    }
+  }
+
+  var benar = (pilihanUser === jawabanBenar);
+  if (benar) {
+    skorUser++;
+    fb.className = 'feedback-soal benar';
+    fb.innerHTML = '✅ Betul! ' + soalAktif[idxSoal].penjelasan;
+  } else {
+    fb.className = 'feedback-soal salah';
+    fb.innerHTML = '❌ Kurang tepat. ' + soalAktif[idxSoal].penjelasan;
+  }
+  fb.style.display = 'block';
+  soalDijawab++;
+}
+
+function selesaiQuiz() {
+  var total = soalAktif.length;
+  var persen = Math.round((skorUser / total) * 100);
+  var pesan = '';
+
+  if (persen === 100) {
+    pesan = '🏆 Sempurna! Kamu sudah menguasai Error Recognition!';
+  } else if (persen >= 80) {
+    pesan = '⭐ Bagus sekali! Sedikit lagi untuk mencapai sempurna!';
+  } else if (persen >= 60) {
+    pesan = '📖 Cukup baik! Coba baca lagi materi yang masih belum kamu pahami.';
+  } else {
+    pesan = '💪 Terus semangat! Baca materi lagi dan coba quiz-nya ulang ya!';
+  }
+
+  document.getElementById('tampil-skor').textContent = skorUser + ' / ' + total + ' (' + persen + '%)';
+  document.getElementById('tampil-pesan').textContent = pesan;
+  document.getElementById('kotak-hasil').style.display = 'block';
+  document.getElementById('tombol-selesai').style.display = 'none';
+
+  window.scrollTo({ top: document.getElementById('kotak-hasil').offsetTop - 20, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

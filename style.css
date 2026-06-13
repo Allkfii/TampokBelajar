@@ -1,0 +1,503 @@
+/* ========================================
+   ERROR RECOGNITION - STYLESHEET
+   ======================================== */
+
+/* GENERAL STYLES */
+body {
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+.header {
+  background-color: #3399ff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.header p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+}
+
+/* MENU NAVIGATION */
+.menu {
+  background-color: #0077cc;
+  text-align: center;
+  padding: 10px;
+}
+
+.menu button {
+  background-color: #ffffff;
+  color: #0077cc;
+  border: 2px solid #0077cc;
+  padding: 8px 18px;
+  margin: 3px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menu button:hover {
+  background-color: #cce5ff;
+}
+
+.menu button.aktif {
+  background-color: #ffcc00;
+  color: #333;
+  border-color: #ffcc00;
+}
+
+/* CONTENT CONTAINER */
+.konten {
+  max-width: 850px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* ========================================
+   HALAMAN BERANDA (HOME PAGE)
+   ======================================== */
+
+.kotak-sambutan {
+  background-color: white;
+  border: 2px solid #3399ff;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.kotak-sambutan h2 {
+  color: #3399ff;
+  font-size: 24px;
+}
+
+.kotak-sambutan p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.grid-tipe {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.kotak-tipe {
+  border: 2px solid #3399ff;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  background: white;
+  cursor: pointer;
+}
+
+.kotak-tipe:hover {
+  background-color: #e8f4ff;
+}
+
+.kotak-tipe .huruf {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3399ff;
+}
+
+.kotak-tipe .nama {
+  font-size: 12px;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* ========================================
+   HALAMAN MATERI (MATERIALS PAGE)
+   ======================================== */
+
+.kotak-materi {
+  background-color: white;
+  border: 2px solid #aaa;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.judul-materi {
+  background-color: #3399ff;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.judul-materi:hover {
+  background-color: #2288ee;
+}
+
+.isi-materi {
+  padding: 15px;
+  display: none;
+  border-top: 1px solid #ddd;
+}
+
+.isi-materi p {
+  margin: 5px 0 10px 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.isi-materi ul {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #333;
+}
+
+.isi-materi table {
+  font-size: 13px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.isi-materi table tr {
+  background: #e8f4ff;
+}
+
+.isi-materi table td {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+}
+
+/* CONTOH SALAH & BENAR */
+.contoh-salah {
+  background-color: #ffe0e0;
+  border-left: 4px solid red;
+  padding: 8px 12px;
+  margin: 6px 0;
+  font-size: 14px;
+  border-radius: 0 5px 5px 0;
+}
+
+.contoh-benar {
+  background-color: #e0ffe0;
+  border-left: 4px solid green;
+  padding: 8px 12px;
+  margin: 6px 0;
+  font-size: 14px;
+  border-radius: 0 5px 5px 0;
+}
+
+.label-salah {
+  color: red;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.label-benar {
+  color: green;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* ========================================
+   HALAMAN QUIZ (QUIZ PAGE)
+   ======================================== */
+
+.kotak-soal {
+  background-color: white;
+  border: 2px solid #3399ff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.nomor-soal {
+  background-color: #3399ff;
+  color: white;
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.teks-soal {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.kalimat-soal {
+  background-color: #f5f5f5;
+  border: 1px dashed #999;
+  padding: 10px;
+  border-radius: 5px;
+  font-style: italic;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.kalimat-soal u {
+  color: red;
+  text-decoration-color: red;
+}
+
+/* ANSWER CHOICES */
+.pilihan-jawaban {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pilihan-jawaban li {
+  margin: 6px 0;
+}
+
+.pilihan-jawaban li label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #fafafa;
+  transition: background 0.2s;
+}
+
+.pilihan-jawaban li label:hover {
+  background-color: #e8f4ff;
+  border-color: #3399ff;
+}
+
+.pilihan-jawaban li label.benar {
+  background-color: #d4edda;
+  border-color: green;
+  color: #155724;
+}
+
+.pilihan-jawaban li label.salah {
+  background-color: #f8d7da;
+  border-color: red;
+  color: #721c24;
+}
+
+/* FEEDBACK */
+.feedback-soal {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  display: none;
+}
+
+.feedback-soal.benar {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.feedback-soal.salah {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* BUTTONS */
+.tombol-cek {
+  margin-top: 12px;
+  background-color: #3399ff;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tombol-cek:hover {
+  background-color: #2288ee;
+}
+
+.tombol-cek:disabled {
+  background-color: #aaa;
+  cursor: default;
+}
+
+/* ========================================
+   HASIL QUIZ (QUIZ RESULTS)
+   ======================================== */
+
+.kotak-hasil {
+  background-color: white;
+  border: 3px solid #ffcc00;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  display: none;
+}
+
+.kotak-hasil h2 {
+  color: #333;
+  font-size: 22px;
+}
+
+.skor-besar {
+  font-size: 60px;
+  font-weight: bold;
+  color: #3399ff;
+}
+
+.tombol-ulang {
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  padding: 10px 25px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.tombol-ulang:hover {
+  background-color: #eebb00;
+}
+
+/* ========================================
+   HALAMAN RANGKUMAN (SUMMARY PAGE)
+   ======================================== */
+
+.tabel-cheat {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background-color: white;
+}
+
+.tabel-cheat th {
+  background-color: #3399ff;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.tabel-cheat td {
+  padding: 9px 10px;
+  border: 1px solid #ccc;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.tabel-cheat tr:nth-child(even) {
+  background-color: #f0f8ff;
+}
+
+.tabel-cheat tr:hover {
+  background-color: #e0f0ff;
+}
+
+.badge-tipe {
+  background-color: #3399ff;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+  background-color: #3399ff;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  margin-top: 40px;
+}
+
+/* ========================================
+   UTILITY & INFO BOXES
+   ======================================== */
+
+.tips-box {
+  background: #fffbe6;
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 5px;
+}
+
+.tips-box strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.tips-box ul {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.highlight-box {
+  margin-top: 20px;
+  background: #fffbe6;
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.highlight-box strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.highlight-box ul {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN (Mobile)
+   ======================================== */
+
+@media (max-width: 500px) {
+  .grid-tipe {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .menu button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
